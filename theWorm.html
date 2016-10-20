@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>moving square</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		body{
+			background-color: black;
+		}
+		#worm{
+			position: absolute;
+			height:10px;
+			width:1px;
+			background-color: lightblue;
+		}
+		#worm2{
+			position: absolute;
+			height:10px;
+			width:1px;
+			background-color: lightblue;
+		}
+
+	</style>
+</head>
+<body>
+
+		<div id="worm"> </div>
+		<div id="worm2"> </div>
+
+	<script>
+
+			var topp = 100;
+			var topp2 = 100;
+			var speed = 500;
+
+
+			for (var i = 0; i < 5; i++){
+
+				$("#worm").css({
+					"width":"10px",
+					"left":"40%"},speed)
+				$("#worm").animate({"height":"100px"},speed)
+				
+
+				$("#worm").animate({
+					"height":"0px",
+					"top": topp + "px"},speed)
+
+				topp = topp + 100;
+			}
+
+
+
+
+			for (var i = 0; i < 6; i++){
+
+				$("#worm2").css({
+					"width":"10px",
+					"left":"50%"},speed)
+
+				$("#worm2").animate({"height":"100px"},speed)
+				
+
+				$("#worm2").animate({
+					"height":"0px",
+					"top": topp2 + "px"},speed)
+
+				topp2 = topp2 + 100;
+			}
+
+	</script>
+</body>
+</html>
